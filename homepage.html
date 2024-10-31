@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FilmXSeries</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #1c1c1e;
+            color: #fff;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Header */
+        .header {
+            background-color: #141414;
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header .logo h1 {
+            font-size: 1.8rem;
+            color: #e50914;
+        }
+
+        .header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .header nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .header nav ul li a:hover {
+            color: #e50914;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://via.placeholder.com/1200x400') center/cover no-repeat;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero form {
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        .hero form input[type="text"] {
+            padding: 10px;
+            border: none;
+            border-radius: 3px 0 0 3px;
+            outline: none;
+            width: 300px;
+            max-width: 100%;
+        }
+
+        .hero form button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #e50914;
+            color: #fff;
+            border-radius: 0 3px 3px 0;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .hero form button:hover {
+            background-color: #b00710;
+        }
+
+        /* Featured Movies Section */
+        .featured {
+            padding: 50px 0;
+            background-color: #181818;
+        }
+
+        .featured h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .movie-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .movie-card {
+            background-color: #2c2c2e;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .movie-card:hover {
+            transform: scale(1.05);
+        }
+
+        .movie-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .movie-info {
+            padding: 15px;
+        }
+
+        .movie-info h3 {
+            font-size: 1.2rem;
+            color: #e50914;
+            margin-bottom: 10px;
+        }
+
+        .movie-info p {
+            font-size: 0.9rem;
+            color: #d1d1d1;
+        }
+
+        /* Footer */
+        footer {
+            padding: 20px 0;
+            text-align: center;
+            background-color: #141414;
+            color: #777;
+        }
+
+        footer p {
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>FilmXSeries                </h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Movies</a></li>
+                    <li><a href="#">Series</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section with Search Bar -->
+    <section class="hero">
+        <div class="container">
+            <h2>Discover Amazing Movies & Series</h2>
+            <form>
+                <input type="text" placeholder="Search for a movie or series...">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Featured Movies Section -->
+    <section class="featured">
+        <div class="container">
+            <h2>watched movies </h2>
+            <div class="movie-list">
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 1">
+                    <div class="movie-info">
+                        <h3> zhanwri</h3>
+                        <p>follow our instagram </p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 2</h3>
+                        <p>A quick description about Movie 2, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 3</h3>
+                        <p>A quick description about Movie 3, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 4</h3>
+                        <p>A quick description about Movie 4, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 5</h3>
+                        <p>A quick description about Movie 5, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 6</h3>
+                        <p>A quick description about Movie 6, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 7</h3>
+                        <p>A quick description about Movie 7, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 8</h3>
+                        <p>A quick description about Movie 8, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 9</h3>
+                        <p>A quick description about Movie 9, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 10</h3>
+                        <p>A quick description about Movie 10, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 11</h3>
+                        <p>A quick description about Movie 11, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 12</h3>
+                        <p>A quick description about Movie 12, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 13</h3>
+                        <p>A quick description about Movie 13, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 14</h3>
+                        <p>A quick description about Movie 14, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 15</h3>
+                        <p>A quick description about Movie 15, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 16</h3>
+                        <p>A quick description about Movie 16, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 17</h3>
+                        <p>A quick description about Movie 17, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 18</h3>
+                        <p>A quick description about Movie 18, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 19</h3>
+                        <p>A quick description about Movie 19, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 20</h3>
+                        <p>A quick description about Movie 20, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 21</h3>
+                        <p>A quick description about Movie 21, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 22</h3>
+                        <p>A quick description about Movie 22, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 23</h3>
+                        <p>A quick description about Movie 23, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 24</h3>
+                        <p>A quick description about Movie 24, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 25</h3>
+                        <p>A quick description about Movie 25, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 26</h3>
+                        <p>A quick description about Movie 26, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 27</h3>
+                        <p>A quick description about Movie 27, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 28</h3>
+                        <p>A quick description about Movie 28, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 29</h3>
+                        <p>A quick description about Movie 29, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 30</h3>
+                        <p>A quick description about Movie 30, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 31</h3>
+                        <p>A quick description about Movie 31, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 32</h3>
+                        <p>A quick description about Movie 32, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 33</h3>
+                        <p>A quick description about Movie 33, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 34</h3>
+                        <p>A quick description about Movie 34, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 35</h3>
+                        <p>A quick description about Movie 35, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 36</h3>
+                        <p>A quick description about Movie 36, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 37</h3>
+                        <p>A quick description about Movie 37, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 38</h3>
+                        <p>A quick description about Movie 38, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 39</h3>
+                        <p>A quick description about Movie 39, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 40</h3>
+                        <p>A quick description about Movie 40, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 41</h3>
+                        <p>A quick description about Movie 41, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 42</h3>
+                        <p>A quick description about Movie 42, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 43</h3>
+                        <p>A quick description about Movie 43, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 44</h3>
+                        <p>A quick description about Movie 44, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 45</h3>
+                        <p>A quick description about Movie 45, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 46</h3>
+                        <p>A quick description about Movie 46, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 47</h3>
+                        <p>A quick description about Movie 47, aiming to capture viewer interest.</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie Title 47</h3>
+                        <p>A quick description about Movie 47, aiming to capture viewer interest.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 MyCinema. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Placeholder for any JavaScript functionality you may want to add later
+        console.log("Page loaded!");
+    </script>
+</body>
+</html>
